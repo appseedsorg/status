@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "495521169034",
+    "project_id": "status-d20a6",
+    "storage_bucket": "status-d20a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495521169034:android:976657fd87d86aa9163773",
+        "android_client_info": {
+          "package_name": "com.example.farmersubstatus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8yboNUr5hOUMHgFd0NFJUmtfkGORCLUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

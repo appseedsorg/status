@@ -1,4 +1,4 @@
-package com.example.status
+package com.example.farmersubstatus
 
 import io.flutter.embedding.android.FlutterActivity
 
