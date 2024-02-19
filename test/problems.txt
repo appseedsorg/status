@@ -1,0 +1,7 @@
+1 - when changing the default icon
+
+WARNING: Icons with alpha channel are not allowed in the Apple App Store.
+Set "remove_alpha_ios: true" to remove it.
+
+• Overwriting default iOS launcher icon with new icon
+No platform provided
