@@ -2,19 +2,19 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:status_app/screens/auth/views/sign_in_screen.dart';
-import 'package:status_app/screens/auth/views/sign_up_screen.dart';
+import 'package:status_app/screens/auth/views/sign_up_screen_old.dart';
 import '../../../blocs/authentication_bloc/authentication_bloc.dart';
 import '../blocs/sign_in_block/sign_in_bloc.dart';
 import '../blocs/sign_up_block/sign_up_bloc.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+class WelcomeScreenOld extends StatefulWidget {
+  const WelcomeScreenOld({super.key});
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<WelcomeScreenOld> createState() => _WelcomeScreenOldState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen>
+class _WelcomeScreenOldState extends State<WelcomeScreenOld>
     with TickerProviderStateMixin {
   late TabController tabController;
 

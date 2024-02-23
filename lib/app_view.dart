@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:status_app/blocs/authentication_bloc/authentication_bloc.dart';
-import 'package:status_app/screens/auth/views/welcome_screen.dart';
+import 'package:status_app/constants.dart';
+import 'package:status_app/screens/auth/views/Welcome/welcome_screen.dart';
 import 'package:status_app/screens/home/views/home_screen.dart';
 
 class MyAppView extends StatelessWidget {
@@ -13,11 +14,30 @@ class MyAppView extends StatelessWidget {
         title: 'Status',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            colorScheme: ColorScheme.light(
-                background: Colors.grey.shade200,
-                onBackground: Colors.black,
-                primary: Colors.blue,
-                onPrimary: Colors.white)),
+            primaryColor: kPrimaryColor,
+            scaffoldBackgroundColor: Colors.white,
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                elevation: 0,
+                foregroundColor: Colors.white,
+                backgroundColor: kPrimaryColor,
+                shape: const StadiumBorder(),
+                maximumSize: const Size(double.infinity, 56),
+                minimumSize: const Size(double.infinity, 56),
+              ),
+            ),
+            inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor: kPrimaryLightColor,
+              iconColor: kPrimaryColor,
+              prefixIconColor: kPrimaryColor,
+              contentPadding: EdgeInsets.symmetric(
+                  horizontal: defaultPadding, vertical: defaultPadding),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+                borderSide: BorderSide.none,
+              ),
+            )),
         home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
             builder: ((context, state) {
           if (state.status == AuthenticationStatus.authenticated) {
