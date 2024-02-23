@@ -5,3 +5,18 @@ Set "remove_alpha_ios: true" to remove it.
 
 • Overwriting default iOS launcher icon with new icon
 No platform provided
+
+
+2- When Build The project it gives following 3 warnings 
+
+C:\Users\skyla\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-4.15.5\android\src\main\java\io\flutter\plugins\firebase\firestore\FlutterFirebaseFirestorePlugin.java:465: warning: [deprecation] setIndexConfiguration(String) in FirebaseFirestore has been deprecated
+            Tasks.await(firestore.setIndexConfiguration(indexConfiguration));
+                                 ^
+1 warning
+C:\Users\skyla\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.17.5\android\src\main\java\io\flutter\plugins\firebase\auth\FlutterFirebaseAuthPlugin.java:459: warning: [deprecation] fetchSignInMethodsForEmail(String) in FirebaseAuth has been deprecated
+        .fetchSignInMethodsForEmail(email)
+        ^
+C:\Users\skyla\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.17.5\android\src\main\java\io\flutter\plugins\firebase\auth\FlutterFirebaseAuthUser.java:343: warning: [deprecation] updateEmail(String) in FirebaseUser has been deprecated
+        .updateEmail(newEmail)
+        ^
+2 warnings
