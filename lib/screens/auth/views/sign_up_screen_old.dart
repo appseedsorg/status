@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import '../../../components/my_text_field.dart';
 import '../blocs/sign_up_block/sign_up_bloc.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignUpScreenOld extends StatefulWidget {
+  const SignUpScreenOld({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignUpScreenOld> createState() => _SignUpScreenOldState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpScreenOldState extends State<SignUpScreenOld> {
   final passwordController = TextEditingController();
   final emailController = TextEditingController();
   final nameController = TextEditingController();
