@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.background,
         title: Row(
           children: [
-            Image.asset('assets/8.png', scale: 14),
+            Image.asset('assets/images/8.png', scale: 14),
             const SizedBox(width: 8),
             const Text(
               'STATUS',

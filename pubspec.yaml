@@ -16,6 +16,7 @@ dependencies:
 
   bloc: ^8.1.2
   flutter_bloc: ^8.1.3
+  flutter_svg: ^1.1.0
   equatable: ^2.0.5
 
   user_repository:
@@ -28,7 +29,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.13.1
 
 flutter_launcher_icons:
-  image_path: "assets/status.png"
+  image_path: "assets/icons/status.png"
   #image_path_android : "assets/images/andriod/icon.png"
   #image_path_ios : "assets/images/ios/icon.png"
   android: true
@@ -37,4 +38,5 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/
+    - assets/images/
+    - assets/icons/
