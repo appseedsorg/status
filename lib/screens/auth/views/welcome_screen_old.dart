@@ -109,7 +109,7 @@ class _WelcomeScreenOldState extends State<WelcomeScreenOld>
                             create: (context) => SignUpBloc(context
                                 .read<AuthenticationBloc>()
                                 .userRepository),
-                            child: const SignUpScreen(),
+                            child: const SignUpScreenOld(),
                           ),
                         ],
                       ))
