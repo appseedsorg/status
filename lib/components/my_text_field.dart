@@ -12,6 +12,7 @@ class MyTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final String? errorMsg;
   final String? Function(String?)? onChanged;
+  final Color? cursorColor;
 
   const MyTextField(
       {super.key,
@@ -25,7 +26,8 @@ class MyTextField extends StatelessWidget {
       this.validator,
       this.focusNode,
       this.errorMsg,
-      this.onChanged});
+      this.onChanged,
+      this.cursorColor});
 
   @override
   Widget build(BuildContext context) {
@@ -36,24 +38,13 @@ class MyTextField extends StatelessWidget {
       keyboardType: keyboardType,
       focusNode: focusNode,
       onTap: onTap,
-      textInputAction: TextInputAction.next,
       onChanged: onChanged,
+      cursorColor: cursorColor,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.transparent),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
-          borderSide:
-              BorderSide(color: Theme.of(context).colorScheme.secondary),
-        ),
-        fillColor: Colors.grey.shade200,
         filled: true,
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.grey[500]),
         errorText: errorMsg,
       ),
     );

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:status_app/components/already_have_an_account_acheck.dart';
 import 'package:status_app/constants.dart';
-import 'package:status_app/screens/auth/views/Signup/signup_screen.dart';
-// import 'package:status_app/screens/auth/views/sign_up_screen_old.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -48,20 +45,6 @@ class LoginForm extends StatelessWidget {
             child: Text(
               "Login".toUpperCase(),
             ),
-          ),
-          const SizedBox(height: defaultPadding),
-          AlreadyHaveAnAccountCheck(
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    //return const SignUpScreenOld();
-                    return const SignUpScreen();
-                  },
-                ),
-              );
-            },
           ),
         ],
       ),
