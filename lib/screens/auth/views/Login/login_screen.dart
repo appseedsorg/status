@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:status_app/blocs/authentication_bloc/authentication_bloc.dart';
-import 'package:status_app/screens/auth/blocs/sign_in_block/sign_in_bloc.dart';
-import 'package:status_app/screens/auth/views/sign_in_screen.dart';
+import 'package:status_app/components/already_have_an_account_acheck.dart';
+import 'package:status_app/screens/auth/blocs/sign_in_bloc/sign_in_bloc.dart';
+import 'package:status_app/screens/auth/views/Login/components/login_form.dart';
+import 'package:status_app/screens/auth/views/Signup/signup_screen.dart';
 import 'components/login_screen_top_image.dart';
 import 'package:status_app/responsive.dart';
 import 'package:status_app/components/background.dart';
@@ -42,10 +44,21 @@ class MobileLoginScreen extends StatelessWidget {
                 flex: 8,
                 child: BlocProvider<SignInBloc>(
                   create: (_) => signInBloc,
-                  child: const SignInScreen(),
+                  child: const LoginForm(),
                 )),
             const Spacer(),
           ],
+        ),
+        const SizedBox(height: 20.0), // Add spacing between elements
+        AlreadyHaveAnAccountCheck(
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SignUpScreen(),
+              ),
+            );
+          },
         ),
       ],
     );
