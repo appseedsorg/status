@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../../components/my_text_field.dart';
-import '../../../blocs/sign_in_bloc/sign_in_bloc.dart';
+import 'package:status_app/components/already_have_an_account_acheck.dart';
+import 'package:status_app/components/my_text_field.dart';
+import 'package:status_app/screens/auth/blocs/sign_in_bloc/sign_in_bloc.dart';
+import 'package:status_app/screens/auth/views/Signup/signup_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -131,6 +132,17 @@ class _LoginFormState extends State<LoginForm> {
                           )),
                     )
                   : const CircularProgressIndicator(),
+              const SizedBox(height: 20.0), // Add spacing between elements
+              AlreadyHaveAnAccountCheck(
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen(),
+                    ),
+                  );
+                },
+              ),
             ],
           )),
     );
