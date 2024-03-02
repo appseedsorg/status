@@ -135,7 +135,7 @@ class _LoginFormState extends State<LoginForm> {
               const SizedBox(height: 20.0), // Add spacing between elements
               AlreadyHaveAnAccountCheck(
                 press: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const SignUpScreen(),

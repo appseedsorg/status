@@ -215,10 +215,11 @@ class _SignUpFormState extends State<SignUpForm> {
                           )),
                     )
                   : const CircularProgressIndicator(),
+              const SizedBox(height: 20),
               AlreadyHaveAnAccountCheck(
                 login: false,
                 press: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
