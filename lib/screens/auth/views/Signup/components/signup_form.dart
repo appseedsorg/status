@@ -159,24 +159,6 @@ class _SignUpFormState extends State<SignUpForm> {
                       return null;
                     }),
               ),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.9,
-                child: MyTextField(
-                    controller: nameController,
-                    hintText: 'Name',
-                    obscureText: false,
-                    keyboardType: TextInputType.name,
-                    prefixIcon: const Icon(CupertinoIcons.person_fill),
-                    validator: (val) {
-                      if (val!.isEmpty) {
-                        return 'Please fill in this field';
-                      } else if (val.length > 30) {
-                        return 'Name too long';
-                      }
-                      return null;
-                    }),
-              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
               const SizedBox(height: defaultPadding),
               !signUpRequired
